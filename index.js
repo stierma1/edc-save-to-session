@@ -13,8 +13,8 @@ class SaveToSession extends Worker {
         inputVal = req.body[inputKey];
     }
 
-    var search = this.saveToSession(req, images);
-    
+    var search = this.saveToSession(req, inputVal);
+
     if(outputKey){
       req.body[outputKey] = search;
     } else {
